@@ -16,13 +16,19 @@ export function WaveCommand({
 
   return (
     <div className={"wave-command " + className} {...other}>
-      {alphabet.map((char, index) => (
-        <span key={index}>
-          {normalizedValue.indexOf(char) >= 0
-            ? normalizedValue.indexOf(char) + 1
-            : ""}
-        </span>
-      ))}
+      {alphabet.map((char, index) => {
+        const stepIndex = normalizedValue.indexOf(char);
+        const isStep = stepIndex >= 0;
+
+        return (
+          <span
+            key={`${index}-${stepIndex}`}
+            className={isStep ? "active" : "inactive"}
+          >
+            {isStep ? stepIndex + 1 : char.toUpperCase()}
+          </span>
+        );
+      })}
     </div>
   );
 }

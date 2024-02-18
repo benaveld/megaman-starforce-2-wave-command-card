@@ -11,3 +11,11 @@
   text-align: center;
   font-size: 3em;
 }
+
+.wave-command .active {
+  color: inherit;
+}
+
+.wave-command .inactive {
+  color: rgb(110, 110, 110);
+}
