@@ -11,13 +11,15 @@ function App() {
       <h1>Mega Man Star Force 2: Wave command viewer</h1>
       <div className="card">
         <WaveCommand value={cardCode} className="wave-command-grid" />
-        <label htmlFor="wave-command-code">Wave command Code </label>
-        <input
-          name="wave-command-code"
-          type="text"
-          value={cardCode}
-          onChange={(event) => setCardCode(event.target.value)}
-        />
+        <div className="card">
+          <label htmlFor="wave-command-code">Wave command Code </label>
+          <input
+            name="wave-command-code"
+            type="text"
+            value={cardCode}
+            onChange={(event) => setCardCode(event.target.value)}
+          />
+        </div>
       </div>
       <div className="card scroll">
         <div className="card-sektion">
@@ -60,6 +62,11 @@ function App() {
           />
         </div>
       </div>
+      <footer>
+        <a href="https://gamefaqs.gamespot.com/ds/942813-mega-man-star-force-2-zerker-x-ninja/cheats">
+          Mega Man Star Force 2: Wave Command Card source
+        </a>
+      </footer>
     </>
   );
 }

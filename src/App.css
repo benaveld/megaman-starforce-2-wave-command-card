@@ -26,10 +26,6 @@
   aspect-ratio: 1 / 1;
 }
 
-.card-sektion {
-  text-wrap: balance;
-}
-
 .scroll {
   /* TODO    */
   overflow-y: scroll;
