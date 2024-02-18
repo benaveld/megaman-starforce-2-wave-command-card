@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { WaveCommand } from "./WaveCommand";
-import { TribeKingCards, BlackWaveCard } from "./Cards";
+import { TribeKingCards, BlackWaveCard, GiantVersionEnemies } from "./Cards";
 import { CardList } from "./CardList";
 
 function App() {
@@ -40,6 +40,19 @@ function App() {
           </p>
           <CardList
             cards={BlackWaveCard}
+            onCardSelect={(card) => setCardCode(card.Code)}
+          />
+        </div>
+
+        <div className="card-sektion">
+          <h2>Turn virus into their giant version</h2>
+          <p>
+            In the Omega-Xis screen, press select to input a wave command code,
+            use this grid as a reference to know where to input the code.
+          </p>
+          <blockquote>Note: Only one code can be activated at time.</blockquote>
+          <CardList
+            cards={GiantVersionEnemies}
             onCardSelect={(card) => setCardCode(card.Code)}
           />
         </div>

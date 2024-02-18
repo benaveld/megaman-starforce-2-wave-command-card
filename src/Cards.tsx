@@ -461,6 +461,349 @@ export const BlackWaveCard: Card[] = [
   },
 ];
 
+export const GiantVersionEnemies: Card[] = [
+  {
+    Effect: "AIMODP",
+    Code: "Flitter",
+  },
+  {
+    Effect: "AIMQDP",
+    Code: "Carpet Jinn",
+  },
+  {
+    Effect: "AIQBDP",
+    Code: "Boogeist",
+  },
+  {
+    Effect: "AIQBFP",
+    Code: "Hare Jet",
+  },
+  {
+    Effect: "AIQFNP",
+    Code: "Dark Reaper",
+  },
+  {
+    Effect: "AIQFRP",
+    Code: "Muff",
+  },
+  {
+    Effect: "ANCODP",
+    Code: "Colonel Mop",
+  },
+  {
+    Effect: "BDPAIQ",
+    Code: "Mat Jinn",
+  },
+  {
+    Effect: "BFPAIQ",
+    Code: "Hare Rocket",
+  },
+  {
+    Effect: "BNCODH",
+    Code: "Hot Roader",
+  },
+  {
+    Effect: "BNCODP",
+    Code: "Cyclone",
+  },
+  {
+    Effect: "BNCODQ",
+    Code: "Base Sniper",
+  },
+  {
+    Effect: "BNCOSD",
+    Code: "Stream Cancro",
+  },
+  {
+    Effect: "CGOMBN",
+    Code: "Giant Face",
+  },
+  {
+    Effect: "CNDBOF",
+    Code: "Bang",
+  },
+  {
+    Effect: "CNDQOB",
+    Code: "Mono Swordil",
+  },
+  {
+    Effect: "COSMBN",
+    Code: "Copy Fokx",
+  },
+  {
+    Effect: "DBFONC",
+    Code: "Ka-Boom",
+  },
+  {
+    Effect: "DOSCNB",
+    Code: "Sea Cancro",
+  },
+  {
+    Effect: "DQBONC",
+    Code: "Moaian",
+  },
+  {
+    Effect: "EMBFNT",
+    Code: "Shock Mummy",
+  },
+  {
+    Effect: "EMBNCG",
+    Code: "Grabotron",
+  },
+  {
+    Effect: "EMBNCT",
+    Code: "Eyes",
+  },
+  {
+    Effect: "EMBNRT",
+    Code: "Stealth",
+  },
+  {
+    Effect: "FNPAIQ",
+    Code: "Dark Joker",
+  },
+  {
+    Effect: "FNTEMB",
+    Code: "Shock Tut",
+  },
+  {
+    Effect: "FRGSDH",
+    Code: "Bubba Dance",
+  },
+  {
+    Effect: "FRPAIQ",
+    Code: "Raid",
+  },
+  {
+    Effect: "GNCBME",
+    Code: "McLeave",
+  },
+  {
+    Effect: "GOSQFR",
+    Code: "Sno Rollet",
+  },
+  {
+    Effect: "GRHFSN",
+    Code: "Air Squiggle",
+  },
+  {
+    Effect: "HFNSRG",
+    Code: "Air Squirm",
+  },
+  {
+    Effect: "HODCNB",
+    Code: "Hot Biker",
+  },
+  {
+    Effect: "HSDGRF",
+    Code: "Jaka Dance",
+  },
+  {
+    Effect: "IQFRGO",
+    Code: "Lampis",
+  },
+  {
+    Effect: "IQFRGS",
+    Code: "Piran",
+  },
+  {
+    Effect: "LBNDCO",
+    Code: "BomBomBom",
+  },
+  {
+    Effect: "LFNDCO",
+    Code: "Gloppy",
+  },
+  {
+    Effect: "MBNCGO",
+    Code: "Stonehead",
+  },
+  {
+    Effect: "MBNCOS",
+    Code: "Fokx",
+  },
+  {
+    Effect: "NBOMCQ",
+    Code: "Base Mortar",
+  },
+  {
+    Effect: "NCGEMB",
+    Code: "Grabaklone",
+  },
+  {
+    Effect: "NCODLB",
+    Code: "Bom",
+  },
+  {
+    Effect: "NCODLF",
+    Code: "Gooey",
+  },
+  {
+    Effect: "NCTEMB",
+    Code: "Guard Eyez",
+  },
+  {
+    Effect: "NRGSHF",
+    Code: "Ransack",
+  },
+  {
+    Effect: "NRTEMB",
+    Code: "Mega Stealth",
+  },
+  {
+    Effect: "OCGNBM",
+    Code: "Grabity",
+  },
+  {
+    Effect: "OCLBDN",
+    Code: "BomBom",
+  },
+  {
+    Effect: "OCLFDN",
+    Code: "Goopy",
+  },
+  {
+    Effect: "ODHBNC",
+    Code: "Hot Motor",
+  },
+  {
+    Effect: "ODPAIM",
+    Code: "Flitterize",
+  },
+  {
+    Effect: "ODPANC",
+    Code: "General Mop",
+  },
+  {
+    Effect: "ODPBNC",
+    Code: "Tempest",
+  },
+  {
+    Effect: "OMQCBN",
+    Code: "Base Gunner",
+  },
+  {
+    Effect: "OSDBNC",
+    Code: "River Cancro",
+  },
+  {
+    Effect: "PBDQIA",
+    Code: "Rug Jinn",
+  },
+  {
+    Effect: "PBFQIA",
+    Code: "Hare Nitro",
+  },
+  {
+    Effect: "PFDQIA",
+    Code: "Boospook",
+  },
+  {
+    Effect: "PFNQIA",
+    Code: "Dark Demon",
+  },
+  {
+    Effect: "PFRQIA",
+    Code: "Ravage",
+  },
+  {
+    Effect: "PNRHGS",
+    Code: "Mono Swordin",
+  },
+  {
+    Effect: "PODCIA",
+    Code: "Private Mop",
+  },
+  {
+    Effect: "PODCNA",
+    Code: "Storm",
+  },
+  {
+    Effect: "PODCNB",
+    Code: "Flit",
+  },
+  {
+    Effect: "PODMIA",
+    Code: "Boodach",
+  },
+  {
+    Effect: "PQDMIA",
+    Code: "Fluff",
+  },
+  {
+    Effect: "QBNCOM",
+    Code: "Metenna 3",
+  },
+  {
+    Effect: "QDPAIM",
+    Code: "Puff",
+  },
+  {
+    Effect: "QFRGOS",
+    Code: "Sno Roll",
+  },
+  {
+    Effect: "QFRGSD",
+    Code: "Boom",
+  },
+  {
+    Effect: "RFSMGQ",
+    Code: "Metenna",
+  },
+  {
+    Effect: "RGOIQF",
+    Code: "Lucis",
+  },
+  {
+    Effect: "RGSHPN",
+    Code: "Air Wobble",
+  },
+  {
+    Effect: "RGSIQF",
+    Code: "Piraner",
+  },
+  {
+    Effect: "SCONBM",
+    Code: "Guise Fokx",
+  },
+  {
+    Effect: "SDHFRG",
+    Code: "Hoppa Dance",
+  },
+  {
+    Effect: "SGORFQ",
+    Code: "Sno Rollest",
+  },
+  {
+    Effect: "SGPNHR",
+    Code: "Mono Sword",
+  },
+  {
+    Effect: "SMQGFR",
+    Code: "Metenna 2",
+  },
+  {
+    Effect: "SRGFQI",
+    Code: "Piranest",
+  },
+  {
+    Effect: "TFNBME",
+    Code: "Shock Seti",
+  },
+  {
+    Effect: "TNCBME",
+    Code: "Protect Eyez",
+  },
+  {
+    Effect: "TNRBME",
+    Code: "Giga Stealth",
+  },
+  {
+    Effect: "TSHGEA",
+    Code: "Lumis",
+  },
+];
+
 function isSameCard(a: Card) {
   return (b: Card) => a.Code === b.Code;
 }
