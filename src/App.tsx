@@ -8,6 +8,7 @@ function App() {
   const [cardCode, setCardCode] = useState("");
   return (
     <>
+      <h1>Mega Man Star Force 2: Wave command viewer</h1>
       <div className="card">
         <WaveCommand value={cardCode} className="wave-command-grid" />
         <input
