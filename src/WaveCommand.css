@@ -1,0 +1,16 @@
+.wave-command {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.wave-command > span {
+  /* width: 100px;
+  height: 100px; */
+  display: block;
+  border: 2px solid black;
+  text-align: center;
+  /* font-size: 80px; */
+  font-size: math();
+}
