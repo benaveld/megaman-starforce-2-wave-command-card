@@ -6,11 +6,8 @@
 }
 
 .wave-command > span {
-  /* width: 100px;
-  height: 100px; */
   display: block;
   border: 2px solid black;
   text-align: center;
-  /* font-size: 80px; */
-  font-size: math();
+  font-size: 3em;
 }

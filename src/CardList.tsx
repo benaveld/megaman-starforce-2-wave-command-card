@@ -15,16 +15,20 @@ export function CardList({
 }: CardListProps) {
   return (
     <table className={"card-list " + className} {...other}>
-      <tr>
-        <th>Code</th>
-        <th>Effect</th>
-      </tr>
-      {cards.map((card) => (
-        <tr key={card.Code} onClick={() => onCardSelect(card)}>
-          <td>{card.Code}</td>
-          <td>{card.Effect}</td>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Effect</th>
         </tr>
-      ))}
+      </thead>
+      <tbody>
+        {cards.map((card) => (
+          <tr key={card.Code} onClick={() => onCardSelect(card)}>
+            <td>{card.Code}</td>
+            <td>{card.Effect}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }

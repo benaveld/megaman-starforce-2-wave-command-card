@@ -28,50 +28,6 @@ export const TribeKingCards: Card[] = [
 
 export const BlackWaveCard: Card[] = [
   {
-    Effect: "Aqua +30",
-    Code: "RFTEPQ",
-  },
-  {
-    Effect: "All Poison",
-    Code: "RFTELQ",
-  },
-  {
-    Effect: "Avalanche",
-    Code: "FRGSHT",
-  },
-  {
-    Effect: "Count Bomb",
-    Code: "GEMRQF",
-  },
-  {
-    Effect: "Darkness Hole",
-    Code: "TDPOCN",
-  },
-  {
-    Effect: "Destroy Upper",
-    Code: "MBHLPA",
-  },
-  {
-    Effect: "Dragon Sky GX",
-    Code: "DOTELC",
-  },
-  {
-    Effect: "Elec +30",
-    Code: "TEQPFR",
-  },
-  {
-    Effect: "Extimeteor",
-    Code: "QFRLTE",
-  },
-  {
-    Effect: "Fire +30",
-    Code: "QFRPTE",
-  },
-  {
-    Effect: "Gemini Thunder",
-    Code: "DPTNCO",
-  },
-  {
     Effect: "Get All Poison",
     Code: "RFTELQ",
   },
@@ -124,10 +80,6 @@ export const BlackWaveCard: Card[] = [
     Code: "MBNCOA",
   },
   {
-    Effect: "Get Burai Break (Giga Card)",
-    Code: "SHTERG",
-  },
-  {
     Effect: "Get Burai EX",
     Code: "NBOACM",
   },
@@ -146,10 +98,6 @@ export const BlackWaveCard: Card[] = [
   {
     Effect: "Get Burai Sword SP",
     Code: "SGPAHR",
-  },
-  {
-    Effect: "Get Buster Max (Giga Card)",
-    Code: "ACODPT",
   },
   {
     Effect: "Get Cancer Bubble",
@@ -221,11 +169,11 @@ export const BlackWaveCard: Card[] = [
   },
   {
     Effect: "Get Dragon Sky EX",
-    Code: "TEQLOD",
+    Code: "TEQLDH",
   },
   {
     Effect: "Get Dragon Sky EX",
-    Code: "TEQLDH",
+    Code: "TEQLOD",
   },
   {
     Effect: "Get Dragon Sky GX",
@@ -233,11 +181,11 @@ export const BlackWaveCard: Card[] = [
   },
   {
     Effect: "Get Dragon Sky SP",
-    Code: "QSDLTE",
+    Code: "CODLTE",
   },
   {
     Effect: "Get Dragon Sky SP",
-    Code: "CODLTE",
+    Code: "QSDLTE",
   },
   {
     Effect: "Get Elec + 30",
@@ -262,10 +210,6 @@ export const BlackWaveCard: Card[] = [
   {
     Effect: "Get Fire + 30",
     Code: "QFRPTE",
-  },
-  {
-    Effect: "Get Flying Impact (Giga Card)",
-    Code: "SHTFRG",
   },
   {
     Effect: "Get Gekiryuu Wave (Giga Card)",
@@ -293,23 +237,19 @@ export const BlackWaveCard: Card[] = [
   },
   {
     Effect: "Get Giga Card Buster Max",
-    Code: "A,C,,O,D,P,T",
+    Code: "ACODPT",
   },
   {
     Effect: "Get Giga Card Flying Impact",
-    Code: "S,H,T,F,R,G",
-  },
-  {
-    Effect: "Get Giga Card MT Magic",
-    Code: "T,S,H,G,R,F",
+    Code: "SHTFRG",
   },
   {
     Effect: "Get Giga Card Rouge Break",
-    Code: "S,H,T,E,R,G",
+    Code: "SHTERG",
   },
   {
     Effect: "Get Giga Card Torrent Wave",
-    Code: "E,R,K,S,H,T",
+    Code: "ERKSHT",
   },
   {
     Effect: "Get Goat Kung-Fu",
@@ -519,80 +459,44 @@ export const BlackWaveCard: Card[] = [
     Effect: "Get Zetsumetsu Meteor",
     Code: "QFRLTE",
   },
-  {
-    Effect: "Giant Axe",
-    Code: "MBNPTA",
-  },
-  {
-    Effect: "Goron Eye",
-    Code: "DPTACO",
-  },
-  {
-    Effect: "Green Meteor",
-    Code: "MQFRGE",
-  },
-  {
-    Effect: "Ice Meteor",
-    Code: "NBTAPM",
-  },
-  {
-    Effect: "Impact Hook",
-    Code: "DSPAHM",
-  },
-  {
-    Effect: "Leo Kingdom GX",
-    Code: "QFHLTE",
-  },
-  {
-    Effect: "Muramasa",
-    Code: "TEQLFD",
-  },
-  {
-    Effect: "Normal +50",
-    Code: "RGSHPT",
-  },
-  {
-    Effect: "Paralyze Grenade",
-    Code: "HBPALM",
-  },
-  {
-    Effect: "Pegasus Magic GX",
-    Code: "SOPAHG",
-  },
-  {
-    Effect: "PlasmaSprd",
-    Code: "MSDHPA",
-  },
-  {
-    Effect: "Poison Pharaoh",
-    Code: "NCODPT",
-  },
-  {
-    Effect: "Power Song",
-    Code: "LFTEPQ",
-  },
-  {
-    Effect: "Pulse Noise",
-    Code: "QFDLTE",
-  },
-  {
-    Effect: "Search Missile",
-    Code: "PAMHSD",
-  },
-  {
-    Effect: "Sonic Blade",
-    Code: "PAMLBH",
-  },
-  {
-    Effect: "Warrior Soul",
-    Code: "DFTELQ",
-  },
-  {
-    Effect: "Wood +30",
-    Code: "QFLPTE",
-  },
-  {
-    Effect: "Zetsuen Meteor",
-    Code: "FQGERM",
-  },
 ];
+
+function isSameCard(a: Card) {
+  return (b: Card) => a.Code === b.Code;
+}
+
+function removeDuplicits(cards: Card[]) {
+  let uniq: Card[] = [];
+  let duplicits: [Card, Card][] = [];
+  cards.forEach((card, i, arr) => {
+    const other = arr
+      .slice(Math.min(i + 1, arr.length - 1))
+      .find(isSameCard(card));
+    if (other) {
+      duplicits.push([card, other]);
+      return;
+    }
+    if (!arr.slice(0, i).find(isSameCard(card))) uniq.push(card);
+  });
+  return [
+    ...uniq,
+    ...duplicits.map(([a, b]) => (a.Effect.startsWith("Get") ? a : b)),
+  ];
+}
+
+function sortCards(cards: Card[]) {
+  return cards.sort((a, b) => a.Effect.localeCompare(b.Effect));
+}
+
+function cleanUpCardCode(cards: Card[]) {
+  return cards.map(({ Code, ...other }) => ({
+    ...other,
+    Code: Code.replace(/[\s,]/g, ""),
+  }));
+}
+
+export function cleanUpCards(cards: Card[]) {
+  return sortCards(cleanUpCardCode(removeDuplicits(cards)));
+}
+
+console.log(cleanUpCards(BlackWaveCard));
