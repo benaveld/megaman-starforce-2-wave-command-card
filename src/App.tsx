@@ -1,11 +1,21 @@
-import { useState } from "react";
 import "./App.css";
 import { WaveCommand } from "./WaveCommand";
-import { TribeKingCards, BlackWaveCard, GiantVersionEnemies } from "./Cards";
+import {
+  TribeKingCards,
+  BlackWaveCard,
+  GiantVersionEnemies,
+  Card,
+} from "./Cards";
 import { CardList } from "./CardList";
+import useHistoryState from "./historyState";
 
 function App() {
-  const [cardCode, setCardCode] = useState("");
+  const [cardCode, pushNewCardCode, replaceCardCode] = useHistoryState(
+    "code",
+    ""
+  );
+  const pushNewCard = (card: Card) => pushNewCardCode(card.Code);
+
   return (
     <>
       <h1>Mega Man Star Force 2: Wave command viewer</h1>
@@ -14,10 +24,11 @@ function App() {
         <div className="card">
           <label htmlFor="wave-command-code">Wave command Code </label>
           <input
-            name="wave-command-code"
+            id="wave-command-code"
+            name="code"
             type="text"
             value={cardCode}
-            onChange={(event) => setCardCode(event.target.value)}
+            onChange={(event) => replaceCardCode(event.target.value)}
           />
         </div>
       </div>
@@ -34,7 +45,7 @@ function App() {
         <CardList
           cards={TribeKingCards}
           selectedCode={cardCode}
-          onCardSelect={(card) => setCardCode(card.Code)}
+          onCardSelect={pushNewCard}
         />
       </div>
 
@@ -47,7 +58,7 @@ function App() {
         <CardList
           cards={BlackWaveCard}
           selectedCode={cardCode}
-          onCardSelect={(card) => setCardCode(card.Code)}
+          onCardSelect={pushNewCard}
         />
       </div>
 
@@ -61,7 +72,7 @@ function App() {
         <CardList
           cards={GiantVersionEnemies}
           selectedCode={cardCode}
-          onCardSelect={(card) => setCardCode(card.Code)}
+          onCardSelect={pushNewCard}
         />
       </div>
 
