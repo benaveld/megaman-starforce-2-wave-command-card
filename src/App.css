@@ -18,5 +18,6 @@
 
 .card {
   padding: 2em;
-  max-width: 40rem;
+  max-width: 36rem;
+  width: 100%;
 }
