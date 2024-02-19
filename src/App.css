@@ -10,7 +10,6 @@
 }
 
 .card-list {
-  min-width: 30em;
   width: 100%;
 }
 .card-list tr:nth-child(even) {
@@ -19,14 +18,5 @@
 
 .card {
   padding: 2em;
-}
-
-.wave-command-grid {
-  min-width: 30em;
-  aspect-ratio: 1 / 1;
-}
-
-.scroll {
-  /* TODO    */
-  overflow-y: scroll;
+  max-width: 40rem;
 }
