@@ -1,0 +1,11 @@
+.card-list tr:nth-child(even) {
+  background-color: #38444d;
+}
+
+.card-list .active {
+  color: aqua;
+}
+
+.card-list .inactive {
+  color: inherit;
+}

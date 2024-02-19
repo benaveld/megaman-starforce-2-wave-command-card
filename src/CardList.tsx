@@ -1,8 +1,10 @@
 import { Card } from "./Cards";
+import "./CardList.css";
 
 export type CardListProps = {
   cards: Card[];
   onCardSelect?: (card: Card) => void;
+  selectedCode?: string;
 } & JSX.IntrinsicElements["table"];
 
 export function CardList({
@@ -10,6 +12,7 @@ export function CardList({
   onCardSelect = () => {
     //no-op
   },
+  selectedCode = "",
   className = "",
   ...other
 }: CardListProps) {
@@ -22,12 +25,21 @@ export function CardList({
         </tr>
       </thead>
       <tbody>
-        {cards.map((card) => (
-          <tr key={card.Code} onClick={() => onCardSelect(card)}>
-            <td>{card.Code}</td>
-            <td>{card.Effect}</td>
-          </tr>
-        ))}
+        {cards.map((card) => {
+          const isSelected =
+            selectedCode.toLowerCase() === card.Code.toLowerCase();
+          const modifier = isSelected ? "active" : "inactive";
+          return (
+            <tr
+              key={`${card.Code}-${modifier}`}
+              onClick={() => onCardSelect(card)}
+              className={modifier}
+            >
+              <td>{card.Code}</td>
+              <td>{card.Effect}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );

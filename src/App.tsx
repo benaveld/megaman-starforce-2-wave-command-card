@@ -33,6 +33,7 @@ function App() {
         </p>
         <CardList
           cards={TribeKingCards}
+          selectedCode={cardCode}
           onCardSelect={(card) => setCardCode(card.Code)}
         />
       </div>
@@ -45,6 +46,7 @@ function App() {
         </p>
         <CardList
           cards={BlackWaveCard}
+          selectedCode={cardCode}
           onCardSelect={(card) => setCardCode(card.Code)}
         />
       </div>
@@ -58,6 +60,7 @@ function App() {
         <blockquote>Note: Only one code can be activated at time.</blockquote>
         <CardList
           cards={GiantVersionEnemies}
+          selectedCode={cardCode}
           onCardSelect={(card) => setCardCode(card.Code)}
         />
       </div>
